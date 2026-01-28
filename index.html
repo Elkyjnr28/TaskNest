@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task-Nest</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -18,13 +20,8 @@
         <main class="main">
             <section class="task-input-section">
                 <div class="input-wrapper">
-                    <input 
-                        type="text" 
-                        id="taskInput" 
-                        class="task-input" 
-                        placeholder="Add a new task..."
-                        autocomplete="off"
-                    >
+                    <input type="text" id="taskInput" class="task-input" placeholder="Add a new task..."
+                        autocomplete="off">
                     <button id="addBtn" class="add-btn">Add Task</button>
                 </div>
             </section>
@@ -49,8 +46,17 @@
 
                 <div class="tasks-list-wrapper">
                     <ul class="tasks-list" id="tasksList">
-                        <li class="empty-state">
+                        <!-- <li class="empty-state">
                             <p>No tasks yet. Add one to get started!</p>
+                        </li> -->
+                        <li class="task-item">
+                            <div class="task-content">
+                                <input type="checkbox" name="" id="" class="task-checkbox">
+                                <p class="task-txt">Task 1</p>
+                            </div>
+                            <div>
+                                <button class="task-delete">Delete</button>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -62,4 +68,5 @@
         </main>
     </div>
 </body>
+
 </html>

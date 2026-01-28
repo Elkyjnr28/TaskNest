@@ -9,13 +9,13 @@
     --primary: #ffffff;
     --accent: #3498db;
     --success: #27ae60;
-    
+
     /* Neutrals */
     --white: #ffffff;
     --light-gray: #ecf0f1;
     --medium-gray: #bdc3c7;
     --dark-gray: #525252;
-    
+
     /* Semantic */
     --background: #3c3c3c;
     --surface: #ffffff53;
@@ -220,6 +220,7 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -372,4 +373,27 @@ body {
 /* Hidden Class */
 .hidden {
     display: none !important;
+}
+
+
+
+.task-checkbox {
+    margin-left: 9px;
+}
+
+.task-txt {
+    color: var(--white);
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
