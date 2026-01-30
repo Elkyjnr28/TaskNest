@@ -1,12 +1,17 @@
-// 1. Select DOM Elements
+// 1. Select DOM Eleme
+const taskInput = document.getElementById('taskInput');
+// const addBtn = document.getElementById('addBtn');
+const tasksList = document.getElementById('tasksList');
+// const totalCount = document.getElementById('totalCount');
+// const completedCount = document.getElementById('completedCount');
+// const filterBtns = document.querySelectorAll('.filter-btn');
+// const clearBtn = document.getElementById('clearBtn');
 
 // 2. Initialize State
 let tasks = [];
 let currentFilter = 'all';
 
 // 3. Define Core Functions
-
-console.log(pa);
 
 // - Function: renderTasks()
 function renderTasks() {
