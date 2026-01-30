@@ -1,12 +1,79 @@
-// 1. Select DOM Elements
+// 1. Select DOM Eleme
+const taskInput = document.getElementById('taskInput');
+// const addBtn = document.getElementById('addBtn');
+const tasksList = document.getElementById('tasksList');
+// const totalCount = document.getElementById('totalCount');
+// const completedCount = document.getElementById('completedCount');
+// const filterBtns = document.querySelectorAll('.filter-btn');
+// const clearBtn = document.getElementById('clearBtn');
+const pa = document.getElementById("head");
 
 // 2. Initialize State
+let tasks = [];
+let currentFilter = 'all';
 
 // 3. Define Core Functions
 
+console.log(pa);
+
 // - Function: renderTasks()
+function renderTasks() {
+
+    console.log(tasksList);
+
+    //
+    tasksList.innerHTML = '';
+
+    // Filter the 'tasks' array based on 'currentFilter'
+    const filteredTasks = tasks.filter(task => {
+        if (currentFilter === 'active') return !task.completed;
+        if (currentFilter === 'completed') return task.completed;
+        return true;
+    });
+
+    // Loop through the filtered tasks and create HTML elements for each
+    if (filteredTasks.length === 0) {
+        tasksList.innerHTML = `
+        <li class="empty-state">
+            <p>No tasks found.</p>
+        </li>
+    `;
+    } else {
+        filteredTasks.forEach(task => {
+            const li = document.createElement('li');
+            li.className = `task-item ${task.completed ? 'completed' : ''}`;
+            li.innerHTML = `
+            <div class="task-content">
+                <input type="checkbox" class="task-checkbox" ${task.completed ? 'checked' : ''} data-id="${task.id}">
+                <p class="task-txt">${task.text}</p>
+            </div>
+            <div>
+                <button class="task-delete" data-id="${task.id}">Delete</button>
+            </div>
+        `;
+            tasksList.appendChild(li);
+        });
+    }
+
+
+}
 
 // - Function: addTask()
+function addTask() {
+    const taskValue = taskInput.value;
+
+
+    if (!taskValue) return;
+
+    const newTask = {
+        id: Date.now().toString(),
+        text: taskValue,
+        completed: false
+    };
+
+    //push task array
+    tasks.push(newTask);
+}
 
 // - Function: toggleTask(id)
 
@@ -27,3 +94,4 @@
 // - Clear Completed Button
 
 // 5. Initial Load
+renderTasks();
