@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskNest - Organize Your Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="./index.html">TaskNest</a>
+                </div>
+                <nav class="nav" id="navbar">
+                    <!-- Default nav for logged out users -->
+                    <div class="nav-logged-out">
+                        <a href="../tasknest_loginpage/login.html" class="btn btn-secondary" id="loginBtn">Login</a>
+                        <a href="../tasknest_signuppage/signup.html" class="btn btn-primary" id="signupBtn">Signup</a>
+                    </div>
+                    <!-- Nav for logged in users (hidden by default) -->
+                    <div class="nav-logged-in" style="display: none;">
+                        <a href="./index.html" class="nav-link">Home</a>
+                        <a href="../tasknest_manager/manager.html" class="nav-link">TaskNest</a>
+                        <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="hero">
+            <h1 class="hero-title">TaskNest</h1>
+            <p class="hero-description">Organize and track your daily task with ease.</p>
+            <p> Get started now with <a href="../tasknest_loginpage/login.html">TaskNest</a> </p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

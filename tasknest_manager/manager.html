@@ -4,24 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task-Nest</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TaskNest - Manager</title>
+    <link rel="stylesheet" href="manager-styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-content">
-                <h1 class="logo">Task-Nest</h1>
-                <p class="tagline">Organize and track you daily tasks with ease.</p>
+    <header class="head">
+        <div class="header-container">
+            <div class="header-nav-content">
+                <div class="header-logo">
+                    <a href="../tasknest_homepage/index.html">TaskNest</a>
+                </div>
+                <nav class="nav" id="navbar">
+                    <!-- Nav for logged in users -->
+                    <div class="nav-logged-in">
+                        <a href="../tasknest_homepage/index.html" class="nav-link">Home</a>
+                        <a href="./manager.html" class="nav-link">TaskNest</a>
+                        <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+                    </div>
+                </nav>
             </div>
-        </header>
+        </div>
+    </header>
 
+    <div class="manager-hero">
+        <div class="manager-hero-content">
+            <h1 class="manager-title">TaskNest</h1>
+            <p class="manager-tagline">Organize and track your daily tasks with ease.</p>
+        </div>
+    </div>
+
+    <div class="container">
         <main class="main">
             <section class="task-input-section">
                 <div class="input-wrapper">
                     <input type="text" id="taskInput" class="task-input" placeholder="Add a new task..."
-                        autocomplete="off" value="inputValue">
+                        autocomplete="off">
                     <button id="addBtn" class="add-btn" onclick="addTask()">Add Task</button>
                 </div>
             </section>
@@ -45,29 +63,26 @@
                 </div>
 
                 <div class="tasks-list-wrapper">
-                    <p id="head">hello</p>
                     <ul class="tasks-list" id="tasksList">
-                        <!-- <li class="empty-state">
-                                <p>No tasks yet. Add one to get started!</p>
-                            </li> -->
-                        <li class="task-item">
+                        <!-- <li class="task-item">
                             <div class="task-content">
-                                <input type="checkbox" name="" id="" class="task-checkbox">
+                                <input type="checkbox" class="task-checkbox">
                                 <p class="task-txt">Task 1</p>
                             </div>
                             <div>
-                                <button class="task-delete">Delete</button>
+                                <button class="task-delete" onclick="deleteTask(id)">Delete</button>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
                 <div class="actions">
-                    <button id="clearBtn" class="clear-btn">Clear Completed</button>
+                    <button id="clearBtn" class="clear-btn" onclick="clearCompleted()">Clear Completed</button>
                 </div>
             </section>
         </main>
     </div>
 </body>
+<script src="manager-script.js"></script>
 
 </html>
