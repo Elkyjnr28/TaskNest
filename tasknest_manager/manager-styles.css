@@ -178,6 +178,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
+    white-space: nowrap;
 }
 
 .add-btn:hover {
@@ -275,6 +276,8 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex: 1;
+    min-width: 0;
 }
 
 .task-checkbox {
@@ -283,11 +286,13 @@ body {
     border-radius: 50%;
     cursor: pointer;
     accent-color: var(--primary);
+    flex-shrink: 0;
 }
 
 .task-txt {
     font-size: 1.05rem;
     transition: all 0.2s;
+    word-break: break-word;
 }
 
 .task-item.completed .task-txt {
@@ -303,6 +308,7 @@ body {
     padding: 0.5rem;
     border-radius: 0.375rem;
     transition: all 0.2s;
+    flex-shrink: 0;
 }
 
 .task-delete:hover {
@@ -338,4 +344,153 @@ body {
 .clear-btn:hover {
     border-color: var(--danger);
     color: var(--danger);
+}
+
+/* =====================
+   RESPONSIVE STYLES
+   ===================== */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 1.25rem;
+    }
+
+    .header-logo a {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .manager-title {
+        font-size: 2rem;
+    }
+
+    .manager-tagline {
+        font-size: 1rem;
+    }
+
+    .stats {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .head, .header {
+        padding: 0.75rem 0;
+    }
+
+    .header-container {
+        padding: 0 1rem;
+    }
+
+    .header-logo a {
+        font-size: 1.35rem;
+    }
+
+    .btn {
+        padding: 0.45rem 0.875rem;
+        font-size: 0.825rem;
+    }
+
+    .manager-hero {
+        padding: 1.5rem 1rem 0.75rem;
+    }
+
+    .manager-title {
+        font-size: 1.75rem;
+    }
+
+    .manager-tagline {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 1.25rem 1rem;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.875rem;
+    }
+
+    .task-input {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        width: 100%;
+    }
+
+    .add-btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .stats {
+        gap: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-value {
+        font-size: 1.6rem;
+    }
+
+    .filter-buttons {
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .task-item {
+        padding: 0.875rem 1rem;
+    }
+
+    .task-txt {
+        font-size: 0.95rem;
+    }
+
+    .task-item:hover {
+        transform: none; /* Avoid awkward shift on mobile */
+    }
+
+    .empty-state {
+        padding: 2rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .actions {
+        margin-top: 1.5rem;
+        justify-content: center;
+    }
+
+    .clear-btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.625rem 1rem;
+    }
+}
+
+/* Extra small (360px and below) */
+@media (max-width: 360px) {
+    .manager-title {
+        font-size: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 1.4rem;
+    }
+
+    .task-content {
+        gap: 0.75rem;
+    }
 }

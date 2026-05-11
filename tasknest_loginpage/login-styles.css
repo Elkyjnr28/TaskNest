@@ -203,3 +203,91 @@ body {
 .signup-link a:hover, .login-link a:hover {
     text-decoration: underline;
 }
+
+/* =====================
+   RESPONSIVE STYLES
+   ===================== */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    .main {
+        padding: 1.5rem 1.25rem;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .login-card, .signup-card {
+        padding: 2rem;
+    }
+
+    .login-title, .signup-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header {
+        padding: 0.75rem 0;
+    }
+
+    .logo a {
+        font-size: 1.35rem;
+    }
+
+    .main {
+        padding: 1.25rem 1rem;
+        align-items: stretch;
+    }
+
+    .login-container, .signup-container {
+        max-width: 100%;
+    }
+
+    .login-card, .signup-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 0.75rem;
+    }
+
+    .login-title, .signup-title {
+        font-size: 1.5rem;
+    }
+
+    .login-subtitle, .signup-subtitle {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-input {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        padding: 0.7rem 0.875rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra small (360px and below) */
+@media (max-width: 360px) {
+    .login-card, .signup-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .login-title, .signup-title {
+        font-size: 1.35rem;
+    }
+}
