@@ -9,12 +9,8 @@ const logoutBtn = document.getElementById('logoutBtn');
 
 // Check if user is logged in on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-    if (isLoggedIn === 'true') {
-        showLoggedInNav();
-    } else {
-        showLoggedOutNav();
-    }
+    // Always start with logged-out state
+    showLoggedOutNav();
 });
 
 // Login button click handler
