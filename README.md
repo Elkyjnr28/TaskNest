@@ -23,6 +23,6 @@ TaskNest is a web-based task management application designed to help users organ
 - JavaScript (Vanilla)
 
 ## Getting Started
-1. Open `tasknest_homepage/index.html` in your web browser
+1. Open https://task-nest-rho-ten.vercel.app/ in your web browser
 2. Sign up for a new account or log in with existing credentials
 3. Start managing your tasks in the Task Manager interface
